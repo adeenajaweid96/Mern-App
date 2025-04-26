@@ -2,19 +2,19 @@ import mongoose from "mongoose";
 
 const databaseUser = mongoose.Schema({
    username:{
-     type:string,
+     type:String,
     required:true
    },
    email:{
-    type:string,
+    type:String,
     required:true
    },
    password:{
-    type:string,
+    type:String,
     required:true
 },
    role:{
-    type:string,
+    type:String,
     default:'user',
     enum:["admin","user"],
    },

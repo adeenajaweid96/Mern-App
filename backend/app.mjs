@@ -1,5 +1,6 @@
 import express from "express"
-// import cors from "cors";
+import cors from "cors";
+const PORT =5000 || process.env.PORT;
 import userRoutes from "./routes/userRoutes.js";
 import connectToDb from "./db/db.js";
 

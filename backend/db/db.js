@@ -11,6 +11,7 @@ const connectToDb = async()=>{
     }
     catch(error){
         console.log(chalk.bgRed('error connecting to db'))
+        console.log(error)
     };
 }
 

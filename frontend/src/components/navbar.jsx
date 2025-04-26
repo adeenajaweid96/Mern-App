@@ -2,13 +2,14 @@ import React, { useState} from 'react'
 import { ShoppingCart } from 'lucide-react';
 import { Search } from 'lucide-react';
 import { UserRound , X} from 'lucide-react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 
 import logo from "../assets/SHOP.CO.png"
 
 
-const navbar = () => {
+const Navbar = () => {
     const [showBanner , setShowBanner ] = useState(true);
 const handleClose=()=>{
     setShowBanner(false);   
@@ -32,7 +33,7 @@ const handleClose=()=>{
         <ul className='flex gap-5 text-black font-medium text-lg pt-2'>
             <li><a href="#">Home</a></li>
             <li><a href="">Products</a></li>
-            <li><a href="">Contact</a></li>
+            <li><Link to="/contact"> Contact</Link></li>
             <li><a href="">On Sale</a></li>
         </ul>
         <div className='bg-gray-100 flex gap-2 rounded-full w-[35rem] p-2.5'>
@@ -43,12 +44,16 @@ const handleClose=()=>{
         <div className='flex gap-5 font-medium pt-2'>
 
         <ShoppingCart />
-        <UserRound/>
-       {/* <Link to="Signup"><UserRound/></Link>  */}
+        {/* <UserRound/> */}
+       <Link to="/signup"><UserRound/></Link> 
 </div>
       </nav>
+      <div>
+      
+      </div>
     </div>
+    
   )
 }
 
-export default navbar
+export default Navbar
